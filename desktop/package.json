@@ -1,0 +1,25 @@
+{
+  "name": "mood-checker",
+  "productName": "Mood Checker",
+  "version": "1.0.0",
+  "description": "Type a restaurant review, get Positive or Negative.",
+  "author": "FoBDiii",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --publish never"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.classproject.moodchecker",
+    "productName": "Mood Checker",
+    "files": ["main.js", "index.html"],
+    "mac": { "target": [{ "target": "dmg", "arch": ["universal"] }], "category": "public.app-category.education" },
+    "dmg": { "artifactName": "MoodChecker-mac.dmg" },
+    "win": { "target": [{ "target": "portable", "arch": ["x64"] }] },
+    "portable": { "artifactName": "MoodChecker-windows.exe" }
+  }
+}
